@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #dial {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            margin: 100px;
+			background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div id="dial">
+        </div>
+    </div>
+    <script src="cs.js"></script>
+    <script>
+        var myDial = new dial('#dial',{
+            //奖项设置，至少2项，必填
+            awards: [
+                {
+                    value: '一等奖',
+					name: 'award1'
+                }
+                ,{
+                    value: '二等奖',
+					name: 'award2'
+                }
+                ,{
+                    value: '二等奖',
+					name: 'award3'
+                }
+                ,{
+                    value: '二等奖',
+					name: 'award4'
+                }
+                ,{
+                    value: 'wu等奖',
+					name: 'award5'
+                }
+                ,{
+                    value: '6 等奖',
+					name: 'award6'
+                }
+                ,{
+                    value: '7 等奖',
+					name: 'award7'
+                }
+                ,{
+                    value: '8 等奖',
+					name: 'award8'
+                }
+            ],
+            // 点击按钮传入中奖项
+			btnFct: function(reself) {
+                // 设置中奖项，返回true
+                var reself = myDial.setAward('award8');
+                // alert(reself)
+            },
+        })
+    </script>
+</body>
+</html>
